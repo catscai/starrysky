@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4EF9825D-543F-4D23-BC59-B7E40438A819}</ProjectGuid>
+    <RootNamespace>MyNetworkDisk</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../MyNetworkDisk;../threadpool;../md5;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../md5;../MyNetworkDisk;../threadpool;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\md5\md5.h" />
+    <ClInclude Include="..\threadpool\ThreadPool.h" />
+    <ClInclude Include="FriendList.h" />
+    <ClInclude Include="IOFileStream.h" />
+    <ClInclude Include="MyAddFriendRequestDlg.h" />
+    <ClInclude Include="MyChatDlg.h" />
+    <ClInclude Include="MyExtractFileDlg.h" />
+    <ClInclude Include="MyFriendsDlg.h" />
+    <ClInclude Include="MyFriendSearchDlg.h" />
+    <ClInclude Include="MyLockDlg.h" />
+    <ClInclude Include="MyMainDlg.h" />
+    <ClInclude Include="MyNetworkDisk.h" />
+    <ClInclude Include="MyNetworkDiskDlg.h" />
+    <ClInclude Include="MyNewDirectoryDlg.h" />
+    <ClInclude Include="MyRegisterDlg.h" />
+    <ClInclude Include="MySetDlg.h" />
+    <ClInclude Include="MyShareDlg.h" />
+    <ClInclude Include="MyShareFileDlg.h" />
+    <ClInclude Include="MyTools.h" />
+    <ClInclude Include="MyTransferDlg.h" />
+    <ClInclude Include="MyTransferDownloadDlg.h" />
+    <ClInclude Include="MyTransferFinishDlg.h" />
+    <ClInclude Include="MyTransferUploadDlg.h" />
+    <ClInclude Include="MyWangPanDlg.h" />
+    <ClInclude Include="packdef.h" />
+    <ClInclude Include="ProcessList.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TcpMediator.h" />
+    <ClInclude Include="TcpNet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\md5\md5.cpp" />
+    <ClCompile Include="..\threadpool\ThreadPool.cpp" />
+    <ClCompile Include="FriendList.cpp" />
+    <ClCompile Include="IOFileStream.cpp" />
+    <ClCompile Include="MyAddFriendRequestDlg.cpp" />
+    <ClCompile Include="MyChatDlg.cpp" />
+    <ClCompile Include="MyExtractFileDlg.cpp" />
+    <ClCompile Include="MyFriendsDlg.cpp" />
+    <ClCompile Include="MyFriendSearchDlg.cpp" />
+    <ClCompile Include="MyLockDlg.cpp" />
+    <ClCompile Include="MyMainDlg.cpp" />
+    <ClCompile Include="MyNetworkDisk.cpp" />
+    <ClCompile Include="MyNetworkDiskDlg.cpp" />
+    <ClCompile Include="MyNewDirectoryDlg.cpp" />
+    <ClCompile Include="MyRegisterDlg.cpp" />
+    <ClCompile Include="MySetDlg.cpp" />
+    <ClCompile Include="MyShareDlg.cpp" />
+    <ClCompile Include="MyShareFileDlg.cpp" />
+    <ClCompile Include="MyTools.cpp" />
+    <ClCompile Include="MyTransferDlg.cpp" />
+    <ClCompile Include="MyTransferDownloadDlg.cpp" />
+    <ClCompile Include="MyTransferFinishDlg.cpp" />
+    <ClCompile Include="MyTransferUploadDlg.cpp" />
+    <ClCompile Include="MyWangPanDlg.cpp" />
+    <ClCompile Include="ProcessList.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TcpMediator.cpp" />
+    <ClCompile Include="TcpNet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyNetworkDisk.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MyNetworkDisk.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\123.bmp" />
+    <Image Include="res\directory.bmp" />
+    <Image Include="res\file.bmp" />
+    <Image Include="res\lock.bmp" />
+    <Image Include="res\main.bmp" />
+    <Image Include="res\MyNetworkDisk.ico" />
+    <Image Include="res\register.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MyNetworkDisk.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
